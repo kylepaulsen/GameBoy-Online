@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="js/other/swfobject.js"></script>
+        <script type="text/javascript" src="GameBoyColor.min.js"></script>
+        <title>GameBoy Online</title>
+    </head>
+    <body style="text-align: center;">
+        <canvas id="mainCanvas" width="394" height="304" style="margin-top: 100px;"></canvas>
+        <script type="text/javascript">
+            GBC.init({canvas: "mainCanvas"});
+            // public domain roms:
+            // http://www.zophar.net/pdroms/gameboy.html
+            GBC.loadRom("ironhike.gb");
+        </script>
+    </body>
+</html>

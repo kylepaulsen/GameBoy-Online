@@ -1,7 +1,19 @@
 "use strict";
 var windowStacks = [];
+function getOrCreateElementById(id) {
+    var el = document.getElementById(id);
+    var hiddenDiv = document.getElementById("gameboyHiddenElements");
+    if (el) {
+        return el;
+    }
+    el = document.createElement("input");
+    el.id = id;
+    hiddenDiv.appendChild(el);
+    console.warn("Creating element with id: "+id);
+    return el;
+}
 function windowCreate(sId, bShow) {
-	var oWindow = new windowStack(document.getElementById(sId));
+	var oWindow = new windowStack(getOrCreateElementById(sId));
 	if (bShow) {
 		oWindow.show();
 	}

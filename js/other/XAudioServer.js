@@ -209,7 +209,7 @@ XAudioServer.prototype.initializeWebAudio = function () {
     this.audioType = 1;
 }
 XAudioServer.prototype.initializeFlashAudio = function () {
-	var existingFlashload = document.getElementById("XAudioJS");
+	var existingFlashload = getOrCreateElementById("XAudioJS");
 	this.flashInitialized = false;
 	this.resetCallbackAPIAudioBuffer(44100);
 	switch (XAudioJSChannelsAllocated) {
